@@ -1,0 +1,100 @@
+.terminalContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: #fff;
+  font-family: "Fira Code", monospace;
+}
+
+.terminalHeader {
+  display: flex;
+  background-color: #212121;
+  height: 30px;
+}
+
+.terminalButton {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.red {
+  background-color: #f44336;
+}
+
+.yellow {
+  background-color: #ffeb3b;
+}
+
+.green {
+  background-color: #4caf50;
+}
+
+.terminalBody {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.terminalHistory {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-grow: 1;
+  overflow-y: auto;
+  margin: 10px;
+  padding-bottom: 10px;
+  line-height: 1.5em;
+}
+
+.terminalPromptWrapper {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.terminalPrompt {
+  margin-right: 5px;
+}
+
+.terminalInputWrapper {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+}
+
+.terminalInput {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  margin-left: 5px;
+  flex-grow: 1;
+}
+
+.terminalCursor {
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  animation: blink 1s infinite;
+}
+
+.terminalCursor.active {
+  opacity: 1;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.terminalOutput {
+  margin: 10px;
+}
